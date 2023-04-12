@@ -7,11 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./styles/home.css">
-</head>
 
+</head>
 <body>
     <div class="container">
-        <!-- <div>panel</div> -->
+        <div>
+
+            <div>
+                Titrant:
+                <select id="titrants"></select>
+            </div>
+            <!-- <div id="ranges">
+                Speed of Titrant :
+                <input type="range" min="0.1" max="1" value="0.1" id="slider">
+            </div> -->
+        </div>
         <div class="experiment">
             <div>
                 <img src="./images/burrete.png" id="burrete" alt="burrete_img">
@@ -24,6 +34,18 @@
             </div>
         </div>
     </div>
+    </div>
+    <script>
+        var titrants=["Hydrochloric acid","Sulphuric acid","Hydrobromic acid","Oxalic acid","Acetic acid"];
+        const titrantList=document.getElementById('titrants');
+        console.log(titrantList)
+        titrants.forEach((item)=>{
+            const optiont=document.createElement('option');
+            optiont.innerText=item;
+            optiont.value=item;
+            titrantList.appendChild(optiont);
+        })
+        </script>
 </body>
 
 <script src="./scripts/home.js">

@@ -1,6 +1,10 @@
+body{
+  margin: 0;
+}
+
 #burrete {
-  width: 90px;
-  height: 500px;
+  width: 50px;
+  height: 60%;
 }
 
 .container {
@@ -8,19 +12,23 @@
   justify-content: center;
   padding: 0;
   margin: 0;
+  height: 100vh; 
 }
+
 #knock {
   position: relative;
   height: 60px;
-  width: 6px;
+  width: 10px;
   left: -36px;
   top: -95px;
   border-radius: 4px;
+  padding: 0;
+  margin: 0;
 }
 
 #beaker {
-  width: 120px;
-  height: 170px;
+  width: 6em;
+  height: 15%;
   background-color: #e5e5e5;
   position: relative;
   left: -19px;
@@ -34,17 +42,27 @@
 .experiment {
   background-color: #cad2c5;
   width: 40%;
-  height: 900px;
+  margin: auto;
+  height: 95%;
   display: flex;
   justify-content: center;
   border-radius: 10px;
   min-width: 250px;
+  contain: content;
+  overflow-y: auto;
 }
 
 #liquid {
   background-color: rgb(138, 235, 255);
   height: 10px;
   border-radius: 0 0 10px 10px;
+}
+
+.container > div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .drop {
@@ -162,3 +180,11 @@
     display: none;
   }
 }
+
+#slider{
+  width: 100%;
+  height: 7px;
+  outline:none;
+  border-radius: 3px;
+}
+
