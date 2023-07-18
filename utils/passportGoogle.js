@@ -27,6 +27,7 @@ passport.use(
           { "google.name": profile.displayName },
         ],
       });
+
       if (existingUser) {
         // If the user already exists, return the user
         return done(null, existingUser);
@@ -40,7 +41,9 @@ passport.use(
           },
           isValid: true,
         });
+
         await newUser.save();
+
         return done(null, newUser);
       }
     }
