@@ -1,10 +1,15 @@
 <footer>
-    &copy; Copyright 2023, Nirma University
+    <p id="copyright">Copyright 2023, Nirma University</p>
 </footer>
 
 <style>
-    footer {
+    footer #copyright { 
         padding: 50px;
         text-align: center;
+
     }
 </style>
+
+<script>
+    document.getElementById("copyright").innerHTML = `&copy; Copyright ${new Date().getFullYear()}, Nirma University`
+</script>

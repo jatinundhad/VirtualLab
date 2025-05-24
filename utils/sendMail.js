@@ -9,8 +9,8 @@ const sendEmail = async (email, uniqueString) => {
       port: 587,
       secure: false,
       auth: {
-        user: process.env.USER,
-        pass: "iovtzvsjuoghzsqn",
+        user: process.env.SMTP_HOST,
+        pass: process.env.SMTP_HOST_PWD,
       },
     });
 
